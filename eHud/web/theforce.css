@@ -1,0 +1,593 @@
+@font-face {
+    font-family: 'bahnschrift';
+    src: url('fontes/bahnschrift.ttf');
+}
+
+body{
+    margin: 0px;
+    padding: 0px;
+    overflow:hidden;
+    display: none;
+    font-family: 'Roboto', sans-serif;
+    z-index: -200;
+}
+
+img {
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    margin: 0px;
+    padding: 0px;
+}
+
+span {
+    margin: 0px;
+    padding: 0px;
+}
+
+.logo {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    width: 90px;
+    height: 90px;
+    transform: translate(-50%);
+}
+
+.logo img {
+    width: 90px;
+    height: 90px;
+}
+
+#hud {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+#player {
+    position: absolute;
+    width: 265px;
+    height: 30px;
+    bottom: 30px;
+    right: 20px;
+    border-radius: 5px;
+    transition-duration: 1s;
+}
+
+.backLife {
+    position: absolute;
+    width: 160px;
+    height: 12.5px;
+    right: 105px;
+    background-size: contain;
+    background-position: center;
+    background-image: linear-gradient(45deg, rgb(16, 16, 16), rgb(53, 53, 53)), url(https://grainy-gradients.vercel.app/noise.svg);
+    border-radius: 3px;
+}
+
+.life {
+    width: 154px;
+    height: 6.5px;
+    margin-left: 3px;
+    margin-top: 3px;
+    border-radius: 3px;
+}
+  
+.life span {
+    height: 100%;
+    border-radius: 2px;
+    display: block;
+    background-image: linear-gradient(to right, rgb(8, 163, 23), rgb(29, 188, 53), rgb(40, 237, 9));
+}
+
+.backBodyarmor {
+    position: absolute;
+    width: 160px;
+    height: 12.5px;
+    top: 17.5px;
+    right: 105px;
+    background-size: contain;
+    background-position: center;
+    background-image: linear-gradient(45deg, rgb(16, 16, 16), rgb(53, 53, 53)), url(https://grainy-gradients.vercel.app/noise.svg);
+    border-radius: 3px;
+}
+
+.bodyarmor {
+    width: 154px;
+    height: 6.5px;
+    margin-left: 3px;
+    margin-top: 3px;
+    border-radius: 3px;
+}
+  
+.bodyarmor span {
+    height: 100%;
+    border-radius: 2px;
+    display: block;
+    background-image: linear-gradient(to right, #9C9C9C, #D6D6D6); 
+}
+
+.backHungry {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 70px;
+    background-size: contain;
+    background-position: center;
+    background-image: linear-gradient(45deg, rgb(16, 16, 16), rgb(53, 53, 53)), url(https://grainy-gradients.vercel.app/noise.svg);
+    border-radius: 3px;
+}
+
+.backHungry img {
+    height: 14px;
+    margin-left: 4px;
+    margin-top: 8px;
+}
+
+.hungry {
+    width: 4px;
+    height: 24px;
+    margin-left: 3px;
+    margin-top: 3px;
+    float: left;
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-color:  rgb(53, 53, 53);
+}
+  
+.hungry span {
+    height: 100%;
+    border-radius: 3px;
+    display: block;
+    background-image: linear-gradient(to top, #f8db66 ,#d7a623);
+}
+
+.backThirst {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 35px;
+    background-size: contain;
+    background-position: center;
+    background-image: linear-gradient(45deg, rgb(16, 16, 16), rgb(53, 53, 53)), url(https://grainy-gradients.vercel.app/noise.svg);
+    border-radius: 3px;
+}
+
+.backThirst img {
+    height: 15px;
+    margin-left: 4px;
+    margin-top: 7px;
+}
+
+.thirst {
+    width: 4px;
+    height: 24px;
+    margin-left: 3px;
+    margin-top: 3px;
+    float: left;
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-color:  rgb(53, 53, 53);
+}
+  
+.thirst span {
+    height: 100%;
+    border-radius: 3px;
+    display: block;
+    background-image: linear-gradient(to top, #6EE3FF, #4961FF);
+}
+
+.backStress {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 0px;
+    background-size: contain;
+    background-position: center;
+    background-image: linear-gradient(45deg, rgb(16, 16, 16), rgb(53, 53, 53)), url(https://grainy-gradients.vercel.app/noise.svg);
+    border-radius: 3px;
+}
+
+.backStress img {
+    height: 15px;
+    margin-left: 4px;
+    margin-top: 7px;
+}
+
+
+.stress {
+    width: 4px;
+    height: 24px;
+    margin-left: 3px;
+    margin-top: 3px;
+    float: left;
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+    background-color:  rgb(53, 53, 53);
+}
+  
+.stress span {
+    height: 100%;
+    border-radius: 3px;
+    display: block;
+}
+
+
+#info {
+    position: absolute;
+    height: 25px;
+    top: 30px;
+    right: 20px;
+    float: left;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+}
+
+#voice {
+    position: relative;
+    max-width: max-content;
+    height: 25px;
+    float: left;
+    color: white;
+    text-shadow: -1px 1px 2px #000000;
+    font-size: 9pt;
+    font-weight: 600;
+    background-image: linear-gradient(45deg, rgb(16, 16, 16), rgb(53, 53, 53)), url(https://grainy-gradients.vercel.app/noise.svg);
+    border-radius: 3px;
+}
+
+#voice p {
+    margin-top: 5.5px;
+    margin-right: 13px;
+    float: left;
+    white-space: nowrap;
+}
+
+#voice img {
+   height: 14px;
+   margin-right: 5px;
+   margin-top: 5px;
+   margin-left: 10px;
+   float: left;
+}
+
+#radio {
+    position: relative;
+    max-width: max-content;
+    height: 25px;
+    float: left;
+    margin-left: 5px;
+    text-shadow: -1px 1px 2px #000000;
+    font-size: 9pt;
+    font-weight: 600;
+    background-image: linear-gradient(45deg, rgb(16, 16, 16), rgb(53, 53, 53)), url(https://grainy-gradients.vercel.app/noise.svg);
+    border-radius: 3px;
+    display: none;
+}
+
+#radio p {
+    margin-top: 5.5px;
+    margin-right: 13px;
+    float: left;
+    white-space: nowrap;
+}
+
+#radio img {
+    height: 14px;
+    margin-right: 5px;
+    margin-top: 5px;
+    margin-left: 10px;
+    float: left;
+ }
+
+#time {
+    position: relative;
+    max-width: max-content;
+    height: 25px;
+    float: left;
+    margin-left: 5px;
+    color: white;
+    text-shadow: -1px 1px 2px #000000;
+    font-size: 9pt;
+    font-weight: 600;
+    background-image: linear-gradient(45deg, rgb(16, 16, 16), rgb(53, 53, 53)), url(https://grainy-gradients.vercel.app/noise.svg);
+    border-radius: 3px;
+}
+
+#time p {
+    margin-top: 5.5px;
+    margin-right: 13px;
+    float: left;
+    white-space: nowrap;
+}
+
+#time img {
+   height: 14px;
+   margin-right: 5px;
+   margin-top: 5.5px;
+   margin-left: 10px;
+   float: left;
+}
+
+#address {
+    position: relative;
+    max-width: max-content;
+    height: 25px;
+    float: left;
+    margin-left: 5px;
+    color: white;
+    text-shadow: -1px 1px 2px #000000;
+    font-size: 9pt;
+    font-weight: 600;
+    background-image: linear-gradient(45deg, rgb(16, 16, 16), rgb(53, 53, 53)), url(https://grainy-gradients.vercel.app/noise.svg);
+    border-radius: 3px;
+}
+
+#address p {
+    margin-top: 5.5px;
+    margin-right: 10px;
+    float: left;
+    white-space: nowrap;
+}
+
+#address img {
+   height: 14px;
+   margin-right: 5px;
+   margin-top: 5.5px;
+   margin-left: 13px;
+   float: left;
+}
+
+#vehicle {
+    position: absolute;
+    width: 311px;
+    height: 120px;
+    bottom: 65px;
+    transition-duration: 1s;
+    border-radius: 5px 0px 0px 5px;
+}
+
+#backFuel {
+    position: absolute;
+    width: 30px;
+    height: 90px;
+    right: 35px;
+    bottom: 0px;
+    background-image: linear-gradient(45deg, rgb(16, 16, 16), rgb(53, 53, 53)), url(https://grainy-gradients.vercel.app/noise.svg);
+    border-radius: 3px;
+}
+
+.maskFuel {
+    position: absolute;
+    width: 15px;
+    height: 50px;
+    left: 50%;
+    bottom: 30px;
+    background-color: #222222;
+    border-radius: 3px;
+    transform: translate(-50%,0) rotate(180deg);
+}
+
+.fuel {
+    height: 100%;
+
+}
+
+.fuel span {
+    height: 100%;
+    border-radius: 2px;
+    display: block;
+    background-image: linear-gradient(to top, rgb(252, 9, 9), rgb(205, 130, 10));
+}
+
+#backFuel img {
+    position: absolute;
+    height: 15px;
+    left: 50%;
+    bottom: 7px;
+    transform: translate(-50%,0);
+}
+
+#backAll {
+    position: absolute;
+    width: 145px;
+    height: 90px;
+    right: 70px;
+    bottom: 0px;
+    /* background-image: linear-gradient(to top, rgb(16, 16, 16), rgb(53, 53, 53)); */
+    border-radius: 8px 3px 3px 8px;
+}
+
+#backSpeedometer {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    right: 58px;
+    bottom: 0px;
+}
+
+#vehicle #backSpeedometer #progressSpeedometer svg {
+    position: absolute;
+    width: 80px;
+    transform: translate(0,0) rotate(138deg);
+}
+
+#vehicle #backSpeedometer #progressSpeedometer svg.teste {
+    display: block;
+    fill: transparent;
+    stroke-width: 8px;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 140;
+    transform-origin: 50% 50%;
+    overflow: hidden;
+}
+
+#vehicle #backSpeedometer #progressSpeedometer svg circle {
+    display: block;
+    fill: transparent;
+    stroke-width: 8px;
+    stroke-linecap: round;
+    stroke-dasharray: 283;
+    stroke-dashoffset: 140;
+    transform-origin: 50% 50%;
+}
+
+#vehicle #backSpeedometer #progressSpeedometer svg circle.mask {
+    stroke: rgba(0,0,0,0.35);
+    overflow: hidden;
+}
+
+#vehicle #backSpeedometer #progressSpeedometer svg circle.speed {
+    stroke: url(#speed-gradient);
+    stroke-dashoffset: 180;
+}
+
+#vehicle #backSpeedometer #progressSpeedometer svg:first-child {
+    z-index: 11;
+}
+
+#backTachometer {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    right: 5px;
+    bottom: 5px;
+}
+
+#vehicle #backTachometer #progressTachometer svg { 
+    position: absolute;
+    width: 50px;
+    transform: translate(0,0) rotate(138deg);
+}
+
+#vehicle #backTachometer #progressTachometer svg circle { 
+    display: block; 
+    fill: transparent; 
+    stroke-width: 10px; 
+    stroke-linecap: round; 
+    stroke-dasharray: 283; 
+    stroke-dashoffset: 140; 
+    transform-origin: 50% 50%; 
+}
+
+#vehicle #backTachometer #progressTachometer svg circle.mask { 
+    stroke: rgba(0,0,0,0.35);
+}
+
+#vehicle #backTachometer #progressTachometer svg circle.rpm { 
+    stroke: url(#rpm-gradient); stroke-dashoffset: 180; 
+}
+
+#vehicle #backTachometer #progressTachometer svg:first-child { 
+    z-index: 11; 
+}
+
+#gear {
+    position: absolute;
+    color: white;
+    font-family: 'bahnschrift';
+    font-weight: bold;
+    font-size: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#speedometer {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50%;
+    left: 50%;
+    color: white;
+    font-family: 'bahnschrift';
+    font-weight: bold;
+    font-size: 24px;
+    transform: translate(-50%, -50%);
+}
+
+#kmh {
+    position: absolute;
+    width: 100%;
+    top: 0px;
+    text-align: center;
+}
+
+#kmh-desc {
+    position: absolute;
+    width: 100%;
+    top: 28px;
+    font-family: 'bahnschrift';
+    font-weight: bold;
+    text-align: center;
+    font-size: 10px;
+    color: linear-gradient(to right, rgb(11, 98, 75), rgb(18, 96, 173), rgb(171, 35, 5));
+}
+
+#backInfo {
+    position: absolute;
+    width: 30px;
+    height: 90px;
+    right: 0px;
+    bottom: 0px;
+    background-image: linear-gradient(45deg, rgb(16, 16, 16), rgb(53, 53, 53)), url(https://grainy-gradients.vercel.app/noise.svg);
+    border-radius: 3px;
+}
+
+#headlight {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 0px;
+}
+
+#headlight img {
+    position: absolute;
+    height: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#engine {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 30px;
+}
+
+#engine img {
+    position: absolute;
+    height: 12px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#seatbelt {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    bottom: 60px;
+}
+
+#seatbelt img {
+    position: absolute;
+    height: 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}

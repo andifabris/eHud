@@ -1,0 +1,107 @@
+<html>
+    <head>
+        <meta charset='UTF-8'>
+        <script src='nui://game/ui/jquery.js' type='text/javascript'></script>
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js'></script>
+        <link href='https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap' rel='stylesheet'>
+        <link href='theforce.css' rel='stylesheet' type='text/css'/>
+        <script src='lightsaber.js' type='text/javascript'></script>
+    </head>
+    <body>
+        <div id='hud'>
+            <!-- <div class='logo'><img src='#'></div> -->
+            <div id='vehicle'>
+                <div id='backInfo'>
+                    <div id='headlight'></div>
+                    <div id='engine'></div>
+                    <div id='seatbelt'></div>
+                </div>
+                <div id='backFuel'>
+                    <img src='images/fuel.png'>
+                    <div class='maskFuel'>
+                        <div class='fuel'>
+                            <span id='fuel'></span>
+                        </div>
+                    </div>
+                </div>
+                <div id='backAll'>
+                    <div id='backSpeedometer'>
+                        <div id='progressSpeedometer'>
+                            <svg viewBox='0 0 100 100' class='teste'>
+                                <circle cx='50' cy='50' r='45' class='mask'/>
+                                <circle cx='50' cy='50' r='45' class='speed'/>
+                                <defs>
+                                    <linearGradient id='speed-gradient'>
+                                        <stop offset='0%' stop-color='rgb(255, 0, 0)'/>
+                                        <stop offset='85%' stop-color='rgb(253, 134, 2)'/>
+                                        <stop offset='100%' stop-color='rgb(69, 173, 2)'/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <svg viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' class='border'/></svg>
+                        </div>
+                        <div id='speedometer'>
+                            <div id='kmh'></div>
+                            <div id='kmh-desc'>KM/H</div>
+                        </div>
+                    </div>
+                    <div id='backTachometer'>
+                        <div id='progressTachometer'>
+                            <svg viewBox='0 0 100 100'>
+                                <circle cx='50' cy='50' r='45' class='mask' />
+                                <circle cx='50' cy='50' r='45' class='rpm' />
+                                <defs>
+                                    <linearGradient id='rpm-gradient'>
+                                        <stop offset='0%' stop-color='rgb(255, 0, 0)'/>
+                                        <stop offset='85%' stop-color='rgb(253, 134, 2)'/>
+                                        <stop offset='100%' stop-color='rgb(69, 173, 2)'/>
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <svg viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' class='border' /></svg>
+                        </div>
+                        <div id='gear' class='icon text'><span>N</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div id='player'>
+                <div class='backLife'>
+                    <div class='life' >
+                        <span id='life'></span>
+                    </div>
+                </div>
+                <div class='backBodyarmor'>
+                    <div class='bodyarmor'>
+                        <span id='bodyarmor'></span>
+                    </div>
+                </div>
+                <div class='backHungry'>
+                    <img src='images/hungry.png'>
+                    <div class='hungry'>
+                        <span id='hungry'></span>
+                    </div>
+                </div>
+                <div class='backThirst'>
+                    <img src='images/thirst.png'>
+                    <div class='thirst'>
+                        <span id='thirst'></span>
+                    </div>
+                </div>
+                <div class='backStress'>
+                    <img src='images/stress.png'>
+                    <div class='stress'>
+                        <span id='stress'></span>
+                    </div>
+                </div>
+            </div>
+
+            <div id='info'>
+                <div id='voice'></div>
+                <div id='radio'></div>
+                <div id='time'></div>
+                <div id='address'></div>
+            </div>
+        </div>
+    </body>
+</html>
